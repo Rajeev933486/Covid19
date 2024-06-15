@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    	.nav-link{  		
+    		padding: 20px;
+    	}
+    	.nav-item a:hover{
+    		line-height: fixed;
+            font-size: 1.2em;
+            color: #28acea !important;
+    	}
+
+    	@media (max-width: 550px){
+    	.navbar-nav{
+    		flex-direction: column !important;
+    	}
+    	
+    	#locha{
+    		align-items: center;
+    	}
+    	.navbar-wrapper{
+    		width: 100vw;
+    		display: flex;
+    		justify-content: center;
+    	}
+    	#ulfat{
+    		width: 100vw;
+    		align-items: center;
+    	}
+    	.navbar-wrapper p{
+    		display: none;
+    	}
+    	.navbar-wrapper img{
+    		margin-left: -5%;
+    	}
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
+        <div id="locha" class="container-fluid">
+            <div class="navbar-wrapper">
+				<div class="circular_image">
+                <img src="https://img.freepik.com/free-vector/3d-covid-coronavirus_17005-736.jpg?w=900&t=st=1696091431~exp=1696092031~hmac=869942a336186be0154dcbb3304b4582b5204f22332412789cf3e1be30eca2b8" height="90" width="110">
+                </div>
+				<p class="sps">Covid-19</p>
+            </div>
+            <div id="ulfat">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link sps" href="{% url 'home.html' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link sps" href="{% url 'about.html' %}">About&Info</a></li>
+					<li class="nav-item"><a class="nav-link sps" href="{% url 'contact.html' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link sps" href="{% url 'login.html' %}">Login/Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>

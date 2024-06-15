@@ -1,0 +1,281 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    About
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="{% static 'assets/css/material-dashboard.css'%}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="{% static 'about/about.css' %}">
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      var dragTheme = window.localStorage.getItem('checkbox');
+      if(dragTheme==="true"){
+      	$("#jhamela").removeClass("darkEdition");
+        	window.localStorage.setItem('checkbox', true);
+        	var dragTheme = window.localStorage.getItem('checkbox');
+        	console.log(dragTheme);
+        	$('#checkbox').prop('checked', true);
+      }
+      $("#checkbox").click(function(){
+        if($('#checkbox').prop("checked")){
+        	$("#jhamela").removeClass("darkEdition");
+        	window.localStorage.setItem('checkbox', true);
+        	var dragTheme = window.localStorage.getItem('checkbox');
+        	console.log(dragTheme);	
+        }
+        else{
+        	$("#jhamela").addClass("darkEdition");
+        	window.localStorage.setItem('checkbox', false);
+        	var dragTheme = window.localStorage.getItem('checkbox');
+        	console.log(dragTheme);	
+        }
+      });
+    });
+  </script>
+  <style type="text/css">
+  	
+  	.minarea{
+  		width: 40%;
+  		display: inline-block;
+  		box-sizing: border-box;
+  	}
+  	
+  	.maxarea{
+  		width: 55%;
+  		display: inline-block;
+  		box-sizing: border-box;
+  	}
+  	
+  	.leftside{
+  		float: left;
+  		text-align: left;
+  		padding-left: 5%;
+  	}
+  	
+  	.rightside{
+  		float: right;
+  		text-align: left;
+  		padding-right: 5%;
+  	}
+  
+  @media (max-width: 1000px)
+  {
+  	
+  	.minarea{
+  		width: 100%;
+  		display: inline-block;
+  		margin-top: 30px;
+  		margin-bottom: 30px;
+  	}
+  	
+  	.maxarea{
+  		width: 100%;
+  		display: inline-block;
+  		margin-top: 30px;
+  		margin-bottom: 30px;
+  	}
+  	
+  	.leftside{
+  		float: none;
+  		text-align: center;
+  		padding-left: 0px;
+  	}
+
+  	.leftside img{
+  		width: 60%;
+  		height: auto;
+  	}
+  	
+  	.rightside{
+  		float: none;
+  		text-align: center;
+  		padding-right: 0px;
+  	}
+
+  	.rightside img{
+  		width: 60%;
+  		height: auto;
+  	}
+  }
+  @media (max-width: 500px)
+  {
+  	.leftside{
+  		float: none;
+  	}
+
+  	.leftside img{
+  		width: 90%;
+  		height: auto;
+  	}
+  	
+  	.rightside{
+  		float: none;
+  	}
+
+  	.rightside img{
+  		width: 90%;
+  		height: auto;
+  	}
+  }
+  </style>
+</head>
+
+<body id="jhamela" class="darkEdition lightEdition">
+  <!-- Navbar -->
+  {% include "hospital/Home/preloader.html" %}
+  <div id="myDiv" class="animate-bottom" style="display:none;">
+  {% include "hospital/Home/nav_main.html" %}
+  <!-- End Navbar -->
+  
+  <div style="text-align: center;position: relative;margin-bottom: 150px">
+  <br><br><br>
+ 
+
+
+  {% block body %}
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+        <!-- bootstrap  -->
+        
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+        />
+        
+        <!-- font-awesome -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous"
+        />
+        
+        
+        <!-- google api font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        {% comment %} <link rel="stylesheet" href="about.css"> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="{% static 'about/about.css' %}"> {% endcomment %}
+        <title>Infomation Page</title>
+    </head>
+
+    <body>
+        <div class="title-body">
+            <a href="">About</a>
+            <h3>Covid 19 Information</h3>
+            <div class="heading">
+                <p>
+                    Stay Home.<br>
+                    Stay Safe.
+                </p>
+                
+            </div>
+            {% comment %} <img src="{% static 'images/people-wearing-mask.png' %}" alt=""> {% endcomment %}
+            <img href={% static 'images/WHO.svg' %}></img>
+        </div>
+        
+        <div class="background-image"></div>
+
+        <div class="container">
+            <div class=" row">
+                <div class="col-12 col-md-6 col-xl-6">
+                    <div class="item-container">
+                        <img src="{% static 'images/WHO.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                    <a class="d-flex flex-column align-items-center justify-content-center p-3 block" href="https://www.who.int/publications/who-guidelines">
+                    <div class="description">WHO</div>
+                    <div class="description">Check out the latest guidelines set by the World Health Organisation.</div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                    <a class="d-flex flex-column align-items-center justify-content-center p-3 block" href="https://www.achn.net/about-access/whats-new/health-resources/do-the-five-stop-the-spread-of-covid-19/#:~:text=Avoid%20touching%20your%20eyes%2C%20nose,limit%20your%20exposure%20to%20others.">
+                    <div class="label">GOOGLE</div>
+                    <div class="description">Do the Five!</div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                    <div class="item-container">
+                        <img src="{% static 'images/DotheFive.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                    <div class="item-container">
+                        <img src="{% static 'images/national-emblem-of-india.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                    <a class="d-flex flex-column align-items-center justify-content-center p-3 block" href="https://ncdc.mohfw.gov.in/index1.php?page=1&ipp=All&lang=1&level=1&sublinkid=703&lid=550&font=Increase">
+                    <div class="label">Government of India</div>
+                    <div class="description">Guidelines given by the gov. of India.</div>
+                    </a>
+                </div>
+            </div>
+        </div>          
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+</html>
+
+  
+
+  </div>
+ 
+
+  {% include "hospital/Home/footer.html" %}
+</div>
+  <!--   Core JS Files   -->
+  <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/bootstrap-material-design.min.js' %}"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="{% static 'assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--  Google Maps Plugin    -->
+  
+ <!-- Chartist JS -->
+ <script src="{% static 'assets/js/plugins/chartist.min.js' %}"></script>
+ <!--  Notifications Plugin    -->
+ <script src="{% static 'assets/js/plugins/bootstrap-notify.js' %}"></script>
+ <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+</body>
+
+</html>
+
+
+
+ {% endblock %}
+
