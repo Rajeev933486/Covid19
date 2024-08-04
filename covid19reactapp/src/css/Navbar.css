@@ -1,0 +1,51 @@
+.nav-link {
+    padding: 20px;
+}
+
+.nav-item a:hover {
+    font-size: 1.2em;
+    color: #28acea !important;
+}
+
+@media (max-width: 550px) {
+    .navbar-nav {
+        flex-direction: column !important;
+    }
+
+    #locha {
+        align-items: center;
+    }
+
+    .navbar-wrapper {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    #ulfat {
+        width: 100vw;
+        align-items: center;
+    }
+
+    .navbar-wrapper p {
+        display: none;
+    }
+
+    .navbar-wrapper img {
+        margin-left: -5%;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Optional: Add a background color */
+    height: 70px; /* Set the height of your navbar here */
+    line-height: 70px; /* Adjust if necessary */
+}
+
+.main-content {
+    padding-top: 70px; /* Adjust based on the height of your navbar */
+}

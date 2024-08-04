@@ -1,0 +1,28 @@
+/* Add styles for the login box */
+.login-box {
+    border-top: 2px solid #e0e0e0; /* A subtle border on top */
+    padding-top: 1rem; /* Padding on top */
+    background-color: #ccebfb; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 1rem; /* Margin on top */
+    padding: 1.5rem; /* Padding inside the box */
+  }
+  
+  .login-box .text-muted {
+    color: #1d2b38; /* Muted text color */
+    font-size: 1rem; /* Adjust the font size */
+    text-align: center; /* Center the text */
+  }
+  
+  .login-box a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold link text */
+    margin-left: 0.5rem; /* Margin left */
+  }
+  
+  .login-box a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
